@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QR_Payment.Net", "QR_Payment.Net\QR_Payment.Net.csproj", "{DA18F8A6-054E-4D6E-807C-BCD888B2E0FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptPayQR", "PromptPayQR\PromptPayQR.csproj", "{5F576184-2782-4FFC-B59C-BCCBF51E3016}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA18F8A6-054E-4D6E-807C-BCD888B2E0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA18F8A6-054E-4D6E-807C-BCD888B2E0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA18F8A6-054E-4D6E-807C-BCD888B2E0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA18F8A6-054E-4D6E-807C-BCD888B2E0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0624B012-F245-40D1-8AC6-F08931992EC4}
+	EndGlobalSection
+EndGlobal
