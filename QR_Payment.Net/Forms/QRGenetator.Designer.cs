@@ -1,6 +1,6 @@
 ﻿namespace QR_Payment.Net
 {
-    partial class Form1
+    partial class QRGenetator
     {
         /// <summary>
         /// Required designer variable.
