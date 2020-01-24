@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="PromptPayQrCode, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PromptPayQrCode.1.0.3\lib\net40\PromptPayQrCode.dll</HintPath>
     </Reference>
