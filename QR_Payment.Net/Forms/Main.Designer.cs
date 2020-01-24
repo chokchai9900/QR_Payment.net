@@ -38,7 +38,7 @@
             this.GotoBillbutton.Name = "GotoBillbutton";
             this.GotoBillbutton.Size = new System.Drawing.Size(193, 79);
             this.GotoBillbutton.TabIndex = 0;
-            this.GotoBillbutton.Text = "Encode QR Payment";
+            this.GotoBillbutton.Text = "Decode QR Payment";
             this.GotoBillbutton.UseVisualStyleBackColor = true;
             this.GotoBillbutton.Click += new System.EventHandler(this.GotoBillbutton_Click);
             // 
@@ -48,7 +48,7 @@
             this.GoToGenbutton.Name = "GoToGenbutton";
             this.GoToGenbutton.Size = new System.Drawing.Size(193, 79);
             this.GoToGenbutton.TabIndex = 1;
-            this.GoToGenbutton.Text = "Decode QR Payment";
+            this.GoToGenbutton.Text = "Encode QR Payment";
             this.GoToGenbutton.UseVisualStyleBackColor = true;
             this.GoToGenbutton.Click += new System.EventHandler(this.GoToGenbutton_Click);
             // 

@@ -15,7 +15,7 @@ namespace QR_Payment.Net
 {
     public partial class Bill_Form : Form
     {
-        public readonly QRService service = new QRService();
+        public QRService service = new QRService();
         public Bill_Form()
         {
             InitializeComponent();
@@ -45,18 +45,19 @@ namespace QR_Payment.Net
         }
         public void GetInfoToTextBox(List<QRModel> QrData)
         {
-            QRVersion.Text = QrData.Find(it => it.DataType == "00").Data;
-            QRType.Text = QrData.Find(it => it.DataType == "01").Data;
-            ApplicationID.Text = QrData.Find(it => it.DataType == "30_00").Data;
-            BillerID.Text = QrData.Find(it => it.DataType == "30_01").Data;
-            Ref1.Text = QrData.Find(it => it.DataType == "30_02").Data;
-            Ref2.Text = QrData.Find(it => it.DataType == "30_03").Data;
-            CurrencyID.Text = QrData.Find(it => it.DataType == "53").Data;
-            Amount.Text = QrData.Find(it => it.DataType == "54").Data;
-            CountryCode.Text = QrData.Find(it => it.DataType == "58").Data;
-            MerchantName.Text = QrData.Find(it => it.DataType == "59").Data;
-            Ref3.Text = QrData.Find(it => it.DataType == "62").Data;
-            CheckSum.Text = QrData.Find(it => it.DataType == "63").Data;
+            QRVersion.Text = QrData.Find(it => it.DataType == "00")?.Data ?? "";
+
+            QRType.Text = QrData.Find(it => it.DataType == "01")?.Data;
+            ApplicationID.Text = QrData.Find(it => it.DataType == "30_00" || it.DataType == "29_00")?.Data?? "";
+            BillerID.Text = QrData.Find(it => it.DataType == "30_01" || it.DataType == "29_01")?.Data ?? "";
+            Ref1.Text = QrData.Find(it => it.DataType == "30_02" || it.DataType == "29_02")?.Data ?? "";
+            Ref2.Text = QrData.Find(it => it.DataType == "30_03" || it.DataType == "29_03")?.Data ?? "";
+            CurrencyID.Text = QrData.Find(it => it.DataType == "53")?.Data ?? "";
+            Amount.Text = QrData.Find(it => it.DataType == "54")?.Data ?? "";
+            CountryCode.Text = QrData.Find(it => it.DataType == "58")?.Data ?? "";
+            MerchantName.Text = QrData.Find(it => it.DataType == "59")?.Data ?? "";
+            Ref3.Text = QrData.Find(it => it.DataType == "62")?.Data ?? "";
+            CheckSum.Text = QrData.Find(it => it.DataType == "63")?.Data ?? "";
 
         }
 
@@ -128,7 +129,21 @@ namespace QR_Payment.Net
         private void GenerateQR_Click(object sender, EventArgs e)
         {
             var result = service.GetInfo(QRString.Text);
+            var condition = result.Find(it => it.DataType.Contains("29"))?.ToString();
+            if (!string.IsNullOrEmpty(condition))
+            {
+                label14.Text = "Phone Number";
+                label13.Text = "Identity ID";
+                label8.Text = "E-wallet ID";
+            }
+            else
+            {
+                label14.Text = "Biller ID";
+                label13.Text = "Reference 1";
+                label8.Text = "Reference 2";
+            }
             GetInfoToTextBox(result);
+
         }
 
         private void SelectQRImage_Click(object sender, EventArgs e)

@@ -13,6 +13,16 @@ namespace QR_Payment.Net.Services
         private readonly List<string> Sublist = new List<string>() { "29", "30", "31", "32" };
         public List<QRModel> GetInfo(string QRBase)
         {
+            if (Result != null)
+            {
+                Result.Clear();
+            }
+            Substring(QRBase);
+            return Result;
+        }
+
+        private void Substring(string QRBase)
+        {
             var Type = QRBase.Substring(0, 2);
             var dataLength = QRBase.Substring(2, 2);
             var dataString = QRBase.Substring(4, int.Parse(dataLength));
@@ -41,8 +51,10 @@ namespace QR_Payment.Net.Services
             var count = Type.Length + dataLength.Length + dataString.Length;
             var newQRString = QRBase.Remove(0, count);
 
-            if (newQRString.Length > 0) GetInfo(newQRString);
-            return Result;
+            if (newQRString.Length > 0)
+            {
+                Substring(newQRString);
+            }
         }
 
         private static void GetSubInfo(string QRSub, string Basetype)
