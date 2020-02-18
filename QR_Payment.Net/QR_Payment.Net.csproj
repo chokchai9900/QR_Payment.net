@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Decode_QR.cs" />
     <Compile Include="Forms\Bill_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,7 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BillQRModel.cs" />
     <Compile Include="Models\QRModel.cs" />
     <Compile Include="Forms\QRGenetator.cs">
       <SubType>Form</SubType>
@@ -119,8 +121,6 @@
       <Name>PromptPayQR</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
