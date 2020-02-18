@@ -44,6 +44,7 @@
       <HintPath>..\packages\PromptPayQrCode.1.0.3\lib\net40\PromptPayQrCode.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Decode_QR.cs" />
     <Compile Include="Forms\Bill_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,7 +75,6 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BillQRModel.cs" />
     <Compile Include="Models\QRModel.cs" />
     <Compile Include="Forms\QRGenetator.cs">
       <SubType>Form</SubType>
@@ -83,9 +82,13 @@
     <Compile Include="Forms\QRGenetator.Designer.cs">
       <DependentUpon>QRGenetator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\QRStringModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\QRService.cs" />
+    <EmbeddedResource Include="Forms\Bill_Form.resx">
+      <DependentUpon>Bill_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +124,8 @@
       <Name>PromptPayQR</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Class\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
