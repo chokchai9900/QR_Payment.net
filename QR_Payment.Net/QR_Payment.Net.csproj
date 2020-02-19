@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Decode_QR.cs" />
+    <Compile Include="Class\Encode.cs" />
     <Compile Include="Forms\Bill_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\BillQRModel.cs" />
+    <Compile Include="Models\QREncodeModel.cs" />
     <Compile Include="Models\QRModel.cs" />
     <Compile Include="Forms\QRGenetator.cs">
       <SubType>Form</SubType>
