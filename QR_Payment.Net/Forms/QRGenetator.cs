@@ -19,7 +19,7 @@ namespace QR_Payment.Net
 
         private void generate_Btn_Click(object sender, EventArgs e)
         {
-            var encodeModel = new QRData
+            var encodeModel = new QRInfo
             {
                 TaxID = txtTaxID.Text,
                 Suffix = txtSuffix.Text,
@@ -33,7 +33,7 @@ namespace QR_Payment.Net
                 PointOfInherite = cbUsese.Text
             };
 
-            var encode = new Encode();
+            var encode = new QRService();
             string qrString = encode.CreateQRString(encodeModel);
             ID.Text = qrString;
             var imageQR = PromptPayQR.PromptPayQR.QRCodeImage(qrString);
