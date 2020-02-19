@@ -19,7 +19,6 @@ namespace QR_Payment.Net.Forms
         {
             InitializeComponent();
         }
-
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             var encodeModel = new IQRGenterate
@@ -34,7 +33,6 @@ namespace QR_Payment.Net.Forms
             var imageQR = PromptPayQR.PromptPayQR.QRCodeImage(qrString);
             QRBox.Image = imageQR;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sfd = new SaveFileDialog()
