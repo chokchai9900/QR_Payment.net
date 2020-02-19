@@ -9,7 +9,7 @@ namespace QR_Payment.Net.Interface
 {
     public interface IQRInfo
     {
-        string CreateQRString(QRData qrData);
+        string CreateQRString(QRInfo qrData);
         QRStringModel QRInfomation(string QRString);
     }
 
