@@ -1,5 +1,6 @@
 ﻿using PromptPayQR;
 using QR_Payment.Net.Class;
+using QR_Payment.Net.Interface;
 using QR_Payment.Net.Models;
 using System;
 using System.Data;
@@ -18,7 +19,7 @@ namespace QR_Payment.Net
 
         private void generate_Btn_Click(object sender, EventArgs e)
         {
-            var encodeModel = new QREncodeModel
+            var encodeModel = new QRData
             {
                 TaxID = txtTaxID.Text,
                 Suffix = txtSuffix.Text,
@@ -28,10 +29,12 @@ namespace QR_Payment.Net
                 Currency = txtCurrency.Text,
                 CountryCode = txtCountryCode.Text,
                 MerchantName = txtMerchantName.Text,
-                TerminalNumber = txtTerminalNumber.Text,
-                Usese = cbUsese.Text
+                TerminalNo = txtTerminalNumber.Text,
+                PointOfInherite = cbUsese.Text
             };
-            var qrString = Encode.QRCodeLongText(encodeModel);
+
+            var encode = new Encode();
+            string qrString = encode.CreateQRString(encodeModel);
             ID.Text = qrString;
             var imageQR = PromptPayQR.PromptPayQR.QRCodeImage(qrString);
             QRBox.Image = imageQR;
