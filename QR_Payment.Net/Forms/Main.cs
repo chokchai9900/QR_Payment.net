@@ -28,5 +28,11 @@ namespace QR_Payment.Net.Forms
             var genForm = new QRGenetator();
             genForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var easyForm = new EASYGenerate();
+            easyForm.Show();
+        }
     }
 }

@@ -63,12 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Encode.cs" />
+    <Compile Include="Class\QRGenerate.cs" />
     <Compile Include="Forms\Bill_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Bill_Form.Designer.cs">
       <DependentUpon>Bill_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EASYGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EASYGenerate.Designer.cs">
+      <DependentUpon>EASYGenerate.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
@@ -76,6 +82,7 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IQRGenerate.cs" />
     <Compile Include="Interface\IQRInfo.cs" />
     <Compile Include="Models\QREncodeModel.cs" />
     <Compile Include="Models\QRModel.cs" />
@@ -91,6 +98,9 @@
     <Compile Include="Class\QRService.cs" />
     <EmbeddedResource Include="Forms\Bill_Form.resx">
       <DependentUpon>Bill_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EASYGenerate.resx">
+      <DependentUpon>EASYGenerate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

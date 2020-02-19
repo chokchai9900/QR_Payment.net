@@ -13,6 +13,7 @@ namespace QR_Payment.Net.Interface
         QRStringModel QRInfomation(string QRString);
     }
 
+  
     public class QRInfo
     {
         public string TaxID { get; set; }

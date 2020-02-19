@@ -137,7 +137,7 @@ namespace QR_Payment.Net
         private void GenerateQR_Click(object sender, EventArgs e)
         {
             var result = service.QRInfomation(QRString.Text);
-            if (!result.Type.DataType.Contains("29"))
+            if (result.AID.DataType.Contains("29_00"))
             {
                 label14.Text = "Phone Number";
                 label13.Text = "Identity ID";
