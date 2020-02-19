@@ -45,21 +45,33 @@ namespace QR_Payment.Net
                 }
             }
         }
-        public void GetInfoToTextBox(List<QRStringModel> QrData)
-        {
-            var Getdata = QrData.FirstOrDefault();
+        public void GetInfoToTextBox(QRStringModel QrData)
+        { 
+            QRVersion.Text = QrData.Version.Data;
+            QRType.Text = QrData.Type.Data;
+            ApplicationID.Text = QrData.AID.Data;
+            BillerID.Text = QrData.Biller.Data;
+            Ref1.Text = QrData.Reference1.Data;
+            Ref2.Text = QrData.Reference2.Data;
+            CurrencyID.Text = QrData.Currency.Data;
+            Amount.Text = QrData.amount.Data;
+            CountryCode.Text = QrData.Country.Data;
+            MerchantName.Text = QrData.Name.Data;
+            CheckSum.Text = QrData.CheckSumCRC16.Data;
 
-            QRVersion.Text = Getdata?.Version.Data ?? "";
-            QRType.Text = Getdata?.Type.Data ?? "";
-            ApplicationID.Text = Getdata?.AID.Data ?? "";
-            BillerID.Text = Getdata?.Biller.Data ?? "";
-            Ref1.Text = Getdata?.Reference1.Data ?? "";
-            Ref2.Text = Getdata?.Reference2.Data ?? "";
-            CurrencyID.Text = Getdata?.Currency.Data ?? "";
-            Amount.Text = Getdata?.amount.Data ?? "";
-            CountryCode.Text = Getdata?.Country.Data ?? "";
-            MerchantName.Text = Getdata?.Name.Data ?? "";
-            CheckSum.Text = Getdata?.CheckSumCRC16.Data ?? "";
+            //var Getdata = QrData.FirstOrDefault();
+
+            //QRVersion.Text = QrData?.Version.Data ?? "";
+            //QRType.Text = QrData?.Type.Data ?? "";
+            //ApplicationID.Text = QrData?.AID.Data ?? "";
+            //BillerID.Text = QrData?.Biller.Data ?? "";
+            //Ref1.Text = QrData?.Reference1.Data ?? "";
+            //Ref2.Text = QrData?.Reference2.Data ?? "";
+            //CurrencyID.Text = QrData?.Currency.Data ?? "";
+            //Amount.Text = QrData?.amount.Data ?? "";
+            //CountryCode.Text = QrData?.Country.Data ?? "";
+            //MerchantName.Text = QrData?.Name.Data ?? "";
+            //CheckSum.Text = QrData?.CheckSumCRC16.Data ?? "";
         }
 
         private void CopyClipboard_button_Click(object sender, EventArgs e)
@@ -124,9 +136,8 @@ namespace QR_Payment.Net
 
         private void GenerateQR_Click(object sender, EventArgs e)
         {
-            var result = service.GetInfo(QRString.Text);
-            var condition = result.Find(it => it.Type.DataType.Contains("29"))?.ToString();
-            if (!string.IsNullOrEmpty(condition))
+            var result = service.QRInfomation(QRString.Text);
+            if (!result.Type.DataType.Contains("29"))
             {
                 label14.Text = "Phone Number";
                 label13.Text = "Identity ID";

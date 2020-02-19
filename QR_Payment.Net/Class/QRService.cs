@@ -1,4 +1,5 @@
-﻿using QR_Payment.Net.Models;
+﻿using QR_Payment.Net.Interface;
+using QR_Payment.Net.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,22 +8,20 @@ using System.Threading.Tasks;
 
 namespace QR_Payment.Net.Class
 {
-    public class QRService
+    public class QRService : IQRInfo
     {
-        private static readonly List<QRStringModel> finalResult = new List<QRStringModel>();
         private static readonly List<QRModel> Result = new List<QRModel>();
         private readonly List<string> Sublist = new List<string>() { "29", "30", "31", "32" };
-        public List<QRStringModel> GetInfo(string QRBase)
+        public QRStringModel QRInfomation(string QRString)
         {
             if (Result != null)
             {
                 Result.Clear();
             }
-            Substring(QRBase);
-            QRDetail(Result);
-            return finalResult;
+            Substring(QRString);
+            return QRDetail(Result);
         }
-        private void QRDetail(List<QRModel> QrData)
+        private QRStringModel QRDetail(List<QRModel> QrData)
         {
             var QRVersion = SortDataMain("00", QrData);
             var QRType = SortDataMain("01", QrData);
@@ -50,7 +49,7 @@ namespace QR_Payment.Net.Class
                 Name = MerchantName,
                 CheckSumCRC16 =CheckSum
             };
-            finalResult.Add(qrdetail);
+            return qrdetail;
         }
 
         private QRModel SortDataSubField(string Conditionperfix1, string Conditionperfix2, List<QRModel> qrListString)
@@ -127,6 +126,11 @@ namespace QR_Payment.Net.Class
             var newQRString = QRSub.Remove(0, count);
             if (newQRString.Length > 0) GetSubInfo(newQRString, Basetype);
         }
+        public string CreateQRString(QRData qrData)
+        {
+            throw new NotImplementedException();
+        }
 
+        
     }
 }

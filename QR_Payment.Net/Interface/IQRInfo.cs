@@ -10,15 +10,26 @@ namespace QR_Payment.Net.Interface
     public interface IQRInfo
     {
         string CreateQRString(QRData qrData);
-        QRInfo QRInfomation(string QRString);
-    }
-
-    public class QRData
-    {
+        QRStringModel QRInfomation(string QRString);
     }
 
     public class QRInfo
     {
-
     }
+
+    public class QRData
+    {
+        public QRModel Version { get; set; }
+        public QRModel Type { get; set; }
+        public QRModel AID { get; set; }
+        public QRModel Biller { get; set; }
+        public QRModel Reference1 { get; set; }
+        public QRModel Reference2 { get; set; }
+        public QRModel Currency { get; set; }
+        public QRModel amount { get; set; }
+        public QRModel Country { get; set; }
+        public QRModel Name { get; set; }
+        public QRModel CheckSumCRC16 { get; set; }
+    }
+
 }
