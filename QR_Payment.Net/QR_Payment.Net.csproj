@@ -76,6 +76,7 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IQRInfo.cs" />
     <Compile Include="Models\QREncodeModel.cs" />
     <Compile Include="Models\QRModel.cs" />
     <Compile Include="Forms\QRGenetator.cs">
