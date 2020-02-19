@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QR_Payment.Net.Services
+namespace QR_Payment.Net.Class
 {
     public class QRService
     {

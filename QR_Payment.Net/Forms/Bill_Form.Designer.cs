@@ -32,7 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CRC_button = new System.Windows.Forms.Button();
-            this.Ref3_button = new System.Windows.Forms.Button();
             this.MerchantName_button = new System.Windows.Forms.Button();
             this.CountryCode_button = new System.Windows.Forms.Button();
             this.Amount_button = new System.Windows.Forms.Button();
@@ -44,7 +43,6 @@
             this.QRFormat_button = new System.Windows.Forms.Button();
             this.VersionQR_button = new System.Windows.Forms.Button();
             this.CheckSum = new System.Windows.Forms.TextBox();
-            this.Ref3 = new System.Windows.Forms.TextBox();
             this.MerchantName = new System.Windows.Forms.TextBox();
             this.CountryCode = new System.Windows.Forms.TextBox();
             this.Amount = new System.Windows.Forms.TextBox();
@@ -67,7 +65,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.GenerateQR = new System.Windows.Forms.Button();
@@ -97,7 +94,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.CRC_button);
-            this.panel1.Controls.Add(this.Ref3_button);
             this.panel1.Controls.Add(this.MerchantName_button);
             this.panel1.Controls.Add(this.CountryCode_button);
             this.panel1.Controls.Add(this.Amount_button);
@@ -109,7 +105,6 @@
             this.panel1.Controls.Add(this.QRFormat_button);
             this.panel1.Controls.Add(this.VersionQR_button);
             this.panel1.Controls.Add(this.CheckSum);
-            this.panel1.Controls.Add(this.Ref3);
             this.panel1.Controls.Add(this.MerchantName);
             this.panel1.Controls.Add(this.CountryCode);
             this.panel1.Controls.Add(this.Amount);
@@ -132,7 +127,6 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(432, 12);
@@ -142,23 +136,13 @@
             // 
             // CRC_button
             // 
-            this.CRC_button.Location = new System.Drawing.Point(644, 446);
+            this.CRC_button.Location = new System.Drawing.Point(644, 409);
             this.CRC_button.Name = "CRC_button";
             this.CRC_button.Size = new System.Drawing.Size(112, 23);
             this.CRC_button.TabIndex = 44;
             this.CRC_button.Text = "Copy to clipboard";
             this.CRC_button.UseVisualStyleBackColor = true;
             this.CRC_button.Click += new System.EventHandler(this.CRC_button_Click);
-            // 
-            // Ref3_button
-            // 
-            this.Ref3_button.Location = new System.Drawing.Point(644, 413);
-            this.Ref3_button.Name = "Ref3_button";
-            this.Ref3_button.Size = new System.Drawing.Size(112, 23);
-            this.Ref3_button.TabIndex = 43;
-            this.Ref3_button.Text = "Copy to clipboard";
-            this.Ref3_button.UseVisualStyleBackColor = true;
-            this.Ref3_button.Click += new System.EventHandler(this.Ref3_button_Click);
             // 
             // MerchantName_button
             // 
@@ -262,17 +246,10 @@
             // 
             // CheckSum
             // 
-            this.CheckSum.Location = new System.Drawing.Point(149, 449);
+            this.CheckSum.Location = new System.Drawing.Point(149, 412);
             this.CheckSum.Name = "CheckSum";
             this.CheckSum.Size = new System.Drawing.Size(489, 20);
             this.CheckSum.TabIndex = 29;
-            // 
-            // Ref3
-            // 
-            this.Ref3.Location = new System.Drawing.Point(149, 416);
-            this.Ref3.Name = "Ref3";
-            this.Ref3.Size = new System.Drawing.Size(489, 20);
-            this.Ref3.TabIndex = 28;
             // 
             // MerchantName
             // 
@@ -461,21 +438,11 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Currency ID";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 412);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 24);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Reference 3";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 445);
+            this.label5.Location = new System.Drawing.Point(53, 408);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 24);
             this.label5.TabIndex = 4;
@@ -525,7 +492,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button CRC_button;
-        private System.Windows.Forms.Button Ref3_button;
         private System.Windows.Forms.Button MerchantName_button;
         private System.Windows.Forms.Button CountryCode_button;
         private System.Windows.Forms.Button Amount_button;
@@ -537,7 +503,6 @@
         private System.Windows.Forms.Button QRFormat_button;
         private System.Windows.Forms.Button VersionQR_button;
         private System.Windows.Forms.TextBox CheckSum;
-        private System.Windows.Forms.TextBox Ref3;
         private System.Windows.Forms.TextBox MerchantName;
         private System.Windows.Forms.TextBox CountryCode;
         private System.Windows.Forms.TextBox Amount;
@@ -560,7 +525,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GenerateQR;

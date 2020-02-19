@@ -1,6 +1,6 @@
 ﻿using MessagingToolkit.QRCode.Codec.Data;
+using QR_Payment.Net.Class;
 using QR_Payment.Net.Models;
-using QR_Payment.Net.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,11 +115,6 @@ namespace QR_Payment.Net
         private void MerchantName_button_Click(object sender, EventArgs e)
         {
             CopyClipboardEvent(MerchantName);
-        }
-
-        private void Ref3_button_Click(object sender, EventArgs e)
-        {
-            CopyClipboardEvent(Ref3);
         }
 
         private void CRC_button_Click(object sender, EventArgs e)
