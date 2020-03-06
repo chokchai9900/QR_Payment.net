@@ -11,13 +11,11 @@ namespace QRPromptPay
     {
         public string CreateQRString(QRInfo data)
         {
-            var metadata = new QRMetadata(data);
-            var qrcode = metadata.QRCode;
-            var payload = qrcode.ToString().Select(x => Convert.ToByte(x)).ToArray();
+            var qrcode = data.GetQrCode();
+            var payload = Encoding.ASCII.GetBytes(qrcode);
             var crc = new CRC16().ComputeCheckSum(payload);
             var crc16 = crc.ToString("X").PadLeft(4, '0');
             qrcode = $"{qrcode}{crc16}";
-            //qrcode.Append(crc16);
             return qrcode.ToString();
         }
     }
