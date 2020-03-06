@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QR_Payment.Net", "QR_Paymen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptPayQR", "PromptPayQR\PromptPayQR.csproj", "{5F576184-2782-4FFC-B59C-BCCBF51E3016}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRPromptPay", "QRPromptPay\QRPromptPay.csproj", "{A02D91C1-73F5-4EE9-BCF1-5FECB0577D14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F576184-2782-4FFC-B59C-BCCBF51E3016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02D91C1-73F5-4EE9-BCF1-5FECB0577D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02D91C1-73F5-4EE9-BCF1-5FECB0577D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02D91C1-73F5-4EE9-BCF1-5FECB0577D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02D91C1-73F5-4EE9-BCF1-5FECB0577D14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
