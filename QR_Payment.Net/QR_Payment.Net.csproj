@@ -136,6 +136,10 @@
       <Project>{5F576184-2782-4FFC-B59C-BCCBF51E3016}</Project>
       <Name>PromptPayQR</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QRPromptPay\QRPromptPay.csproj">
+      <Project>{a02d91c1-73f5-4ee9-bcf1-5fecb0577d14}</Project>
+      <Name>QRPromptPay</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

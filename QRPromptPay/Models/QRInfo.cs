@@ -6,8 +6,6 @@ namespace QRPromptPay.Models
 {
     public class QRInfo
     {
-        public string BillerId => $"{TaxID}{Suffix}";
-
         public string TaxID { get; set; }
         public string Suffix { get; set; }
         public string Ref1 { get; set; }
@@ -17,6 +15,9 @@ namespace QRPromptPay.Models
         public string Amount { get; set; }
         public string MerchantName { get; set; }
         public string TerminalNo { get; set; }
+        /// <summary>
+        /// ใช้ซ้ำได้หรือไม่
+        /// </summary>
         public string PointOfInherite { get; set; }
     }
 }
